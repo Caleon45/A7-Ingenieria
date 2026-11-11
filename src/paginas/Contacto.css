@@ -1,0 +1,336 @@
+/* Contenedor principal */
+.contacto-contenedor {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cuadrícula de contenido */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .contacto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Formulario de contacto - estilos base */
+.formulario-contacto {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(14, 26, 91, 0.1);
+  border: 1px solid rgba(14, 26, 91, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.formulario-contacto:hover {
+  transform: translateY(-5px);
+}
+
+@media (min-width: 769px) {
+  .formulario-contacto {
+    margin: 1rem 3rem 1rem 0;
+    padding: 2.5rem 3.5rem 2.5rem 2.5rem;
+  }
+}
+
+/* Mapa */
+.mapa-container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(14, 26, 91, 0.1);
+  border: 1px solid rgba(14, 26, 91, 0.1);
+  height: fit-content;
+  animation: slideInRight 0.5s ease backwards;
+}
+
+.mapa-container:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Títulos */
+.formulario-contacto h2,
+.mapa-container h2 {
+  color: #0e1a5b;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.formulario-contacto h2::after,
+.mapa-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #0e1a5b;
+  border-radius: 2px;
+}
+
+/* Grupos del formulario */
+.form-group {
+  margin-bottom: 1.8rem;
+  animation: slideInLeft 0.5s ease backwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #0e1a5b;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #0e1a5b;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2c3e50;
+  box-shadow: 0 0 8px rgba(14, 26, 91, 0.2);
+}
+
+/* Estilo para el error de reCAPTCHA */
+.recaptcha-error {
+  color: #d32f2f;
+  background-color: #fde7e7;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+  border: 1px solid #f5c6cb;
+}
+
+/* Botón enviar */
+.boton-enviar {
+  background: linear-gradient(135deg, #0e1a5b 0%, #1a2b7c 100%);
+  color: white;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: block;
+  width: max-content;
+  margin: 1.5rem auto 0;
+  box-shadow: 0 8px 20px rgba(14, 26, 91, 0.2);
+}
+
+.boton-enviar:hover {
+  background: linear-gradient(135deg, #1a2b7c 0%, #0e1a5b 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(14, 26, 91, 0.35);
+}
+
+.boton-enviar:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mapa iframe */
+.mapa-container iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Dirección debajo del mapa */
+.mapa-direccion {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #0e1a5b;
+  text-align: center;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.boton-whatsapp {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.boton-whatsapp:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #25D366;
+}
+
+.boton-whatsapp svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.boton-whatsapp:hover svg {
+  transform: scale(1.1);
+}
+
+/* Modal de estado y modal de captcha */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(74, 87, 165, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-enviando p,
+.modal-enviado p,
+.modal-contenido p {
+  color: #0e1a5b;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.spinner {
+  border: 4px solid rgba(14, 26, 91, 0.1);
+  border-top: 4px solid #0e1a5b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.boton-ok {
+  background-color: #0e1a5b;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-ok:hover {
+  background-color: #1a2b6d;
+  transform: translateY(-2px);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .contacto-contenedor {
+    margin: 2rem auto;
+    padding: 0 10px;
+  }
+
+  .contacto-grid {
+    gap: 2rem;
+  }
+
+  .formulario-contacto {
+    padding: 1.5rem;
+  }
+
+  .mapa-container {
+    padding: 1.5rem;
+  }
+
+  .mapa-container iframe {
+    height: 300px;
+  }
+
+  .boton-enviar {
+    width: 100%;
+  }
+}

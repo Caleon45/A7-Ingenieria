@@ -1,0 +1,659 @@
+/* src/paginas/Empresa.css */
+
+/* Contenedor principal */
+.empresa-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+/* Sección Hero */
+.empresa-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #183150;
+}
+
+.hero-imagen-contenedor {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-left: -60px;
+  width: calc(100% + 40px);
+  overflow: hidden;
+}
+
+.hero-imagen {
+  width: 200%;
+  height: 300px;
+  object-fit: cover;
+  object-position: left;
+  margin-left: -100px;
+  border-radius: 8px 0 0 8px;
+}
+
+.hero-texto {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  padding-left: 20px;
+}
+
+.hero-texto h2 {
+  font-size: 2rem;
+  color: #0e1a5b;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+/* Sección principal */
+.empresa-main {
+  margin-bottom: 40px;
+}
+
+/* Quiénes Somos */
+.quienes-somos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 40px;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.quienes-texto {
+  flex: 1.2;
+  text-align: left;
+}
+
+.quienes-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0e1a5b;
+}
+
+.quienes-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.quienes-imagen {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quienes-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Misión */
+.mision-franja {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #183150;
+  margin-top: 40px;
+}
+
+.mision-contenido {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.mision-imagen {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mision-img {
+  max-width: 500px;
+  width: 200%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mision-texto {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: left;
+}
+
+.mision-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.mision-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Visión */
+.vision {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  background-color: #fff;
+  margin-top: 40px;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.vision-texto {
+  flex: 1.2;
+  text-align: left;
+}
+
+.vision-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0e1a5b;
+}
+
+.vision-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.vision-imagen {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vision-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Timeline */
+.timeline-container {
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.timeline-slide-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #183150;
+  padding: 20px 60px;
+}
+
+.timeline-heading {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.timeline-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: white;
+  text-align: left;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.timeline-image-container {
+  flex: 1;
+}
+
+.timeline-image-placeholder {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.timeline-image.rounded {
+  border-radius: 15px;
+}
+
+.timeline-content {
+  flex: 1;
+  text-align: left;
+}
+
+.timeline-year {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.timeline-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.timeline-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ffffffdd;
+}
+
+.timeline-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.8rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.timeline-arrow:hover {
+  color: #fff;
+}
+
+.timeline-arrow.prev {
+  left: 0;
+  margin-left: 10px;
+}
+
+.timeline-arrow.next {
+  right: 0;
+  margin-right: 10px;
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.slide-in-right {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animaciones y responsive */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imagenHero {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.empresa-hero {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-imagen-contenedor {
+  animation: imagenHero 1s ease-out;
+}
+
+.quienes-somos,
+.mision-contenido,
+.vision {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.quienes-somos {
+  animation-delay: 0.3s;
+}
+
+.mision-contenido {
+  animation-delay: 0.6s;
+}
+
+.vision {
+  animation-delay: 0.9s;
+}
+
+.hero-texto h2,
+.quienes-texto h2,
+.mision-texto h2,
+.vision-texto h2 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-texto h2 {
+  animation-delay: 0.4s;
+}
+
+.quienes-texto h2 {
+  animation-delay: 0.5s;
+}
+
+.mision-texto h2 {
+  animation-delay: 0.7s;
+}
+
+.vision-texto h2 {
+  animation-delay: 1s;
+}
+
+.quienes-img,
+.mision-img,
+.vision-img {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.quienes-img {
+  animation-delay: 0.5s;
+}
+
+.mision-img {
+  animation-delay: 0.7s;
+}
+
+.vision-img {
+  animation-delay: 1s;
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sección de Lectura de Archivos PDF */
+/* El fondo gris se extiende sin márgenes laterales */
+.pdf-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Contenedor interno para limitar el contenido a los márgenes originales */
+.pdf-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pdf-title {
+  font-size: 2rem;
+  color: #0e1a5b;
+  text-align: center;
+  margin-bottom: 90px; /* Incrementado de 20px a 40px */
+}
+/* Disposición interna de la sección PDF */
+.pdf-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pdf-buttons {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.pdf-buttons button {
+  padding: 14px 24px;
+  font-size: 1rem;
+  background-color: #0e1a5b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-buttons button:hover {
+  background-color: #132f6d;
+  transform: scale(1.02);
+}
+
+/* Solo el visor de PDF mantiene el fondo negro */
+.pdf-viewer {
+  flex: 0 0 55%;
+  background-color: #000;
+  border: 2px solid #222;
+  border-radius: 4px;
+  min-height: 500px;
+  overflow: auto;
+  position: relative;
+}
+
+.pdf-reader {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Navegación del lector PDF */
+.pdf-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.pdf-nav button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.pdf-nav span {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ======================
+   RESPONSIVE (Mobile-First y Adaptaciones)
+   ====================== */
+@media (max-width: 768px) {
+  .empresa-contenedor {
+    padding: 0 15px;
+  }
+  
+  /* Hero */
+  .empresa-hero {
+    flex-direction: column;
+    margin: 15px 0; /* Removidos márgenes negativos que rompían el ancho */
+  }
+  .hero-imagen-contenedor {
+    width: 100%;
+    margin-left: 0;
+  }
+  .hero-imagen {
+    width: 100%;
+    height: 200px;
+    margin-left: 0;
+    border-radius: 8px 8px 0 0;
+  }
+  .hero-texto {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+  .hero-texto h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Quiénes somos, Misión, Visión */
+  .quienes-somos,
+  .mision-contenido,
+  .vision {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 15px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .quienes-texto,
+  .mision-texto,
+  .vision-texto {
+    text-align: center;
+    width: 100%;
+  }
+  .quienes-imagen,
+  .mision-imagen,
+  .vision-imagen {
+    width: 100%;
+    justify-content: center;
+  }
+  .quienes-img,
+  .mision-img,
+  .vision-img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .quienes-texto h2,
+  .mision-texto h2,
+  .vision-texto h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Timeline */
+  .timeline-slide-container {
+    padding: 20px;
+  }
+  .timeline-slide {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .timeline-content {
+    text-align: center;
+  }
+  .timeline-arrow {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  /* PDF Section */
+  .pdf-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .pdf-buttons {
+    width: 100%;
+    align-items: center;
+  }
+  .pdf-viewer {
+    width: 100%;
+    min-height: 400px;
+  }
+  .pdf-title {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* Contenedor para botón flotante y tooltip */
+.pqrs-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+/* Botón flotante agrandado */
+.pqrs-button {
+  width: 70px;
+  height: 70px;
+  background-color: #87cefa;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pqrs-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Tooltip compacto */
+.pqrs-tooltip {
+  position: absolute;
+  right: 100px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background: rgba(14,26,91,0.9);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  line-height: 1.2;      /* texto más compacto */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 0.95rem;
+}
+.pqrs-container:hover .pqrs-tooltip {
+  opacity: 1;
+  transform: translateX(0) translateY(50%);
+}
+
+/* Overlay y modal inalterados */
+.pqrs-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 999;
+}
+.pqrs-modal {
+  background: #fff;
+  width: 90%; max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.pqrs-close {
+  position: absolute; top: 8px; right: 12px;
+  background: transparent; border: none;
+  font-size: 1.5rem; cursor: pointer; color: #777;
+}
+
+/* Formulario inalterado */
+.pqrs-form { margin-top: 1rem; font-family: 'Lato', sans-serif; }
+.pqrs-form h2 {
+  text-align: center; margin-bottom: 1rem;
+  font-family: 'Oswald', sans-serif; color: #0e1a5b;
+}
+.seccion {
+  margin-bottom: 1.5rem;
+  border: 1px solid #87cefa;
+  border-radius: 4px;
+  padding: 0.8rem;
+}
+.seccion legend {
+  padding: 0 0.5rem;
+  font-weight: bold; color: #fff;
+  background-color: #0e1a5b; border-radius: 4px;
+}
+.fila {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.fila label {
+  flex: 1 1 45%; display: flex; flex-direction: column;
+  font-size: 0.9rem;
+}
+.fila input {
+  margin-top: 0.3rem; padding: 0.4rem;
+  border: 1px solid #ccc; border-radius: 4px;
+}
+.tipos-container {
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+}
+.tipo-btn {
+  flex: 1 1 30%; padding: 0.6rem;
+  border: 1px solid #87cefa;
+  background: #fff; border-radius: 4px;
+  cursor: pointer; transition: background-color 0.3s, color 0.3s;
+}
+.tipo-btn:hover { background: #e0f7ff; }
+.tipo-btn.selected {
+  background: #0e1a5b; color: #fff; border-color: #0e1a5b;
+}
+.servicio-input,
+.descripcion-input {
+  width: 100%; padding: 0.5rem;
+  border: 1px solid #ccc; border-radius: 4px;
+  font-size: 0.9rem; resize: vertical;
+}
+.servicio-input { min-height: 60px; }
+.descripcion-input { min-height: 120px; }
+.char-count {
+  text-align: right; font-size: 0.8rem; color: #666; margin-top: 0.3rem;
+}
+.pqrs-submit {
+  display: block; width: 100%; padding: 0.8rem;
+  background-color: #0e1a5b; color: #fff; border: none;
+  border-radius: 4px; font-size: 1rem; font-weight: bold;
+  cursor: pointer; transition: background-color 0.3s;
+}
+.pqrs-submit:disabled {
+  opacity: 0.6; cursor: not-allowed;
+}
+.pqrs-submit:hover:not(:disabled) {
+  background-color: #1a2b6d;
+}
+.pqrs-message {
+  margin-top: 0.8rem; text-align: center; color: green;
+}

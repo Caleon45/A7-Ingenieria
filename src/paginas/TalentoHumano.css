@@ -1,0 +1,435 @@
+.talento-humano {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animación inicial para cada sección */
+.anim-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.anim-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================
+   1. PORTADA
+   ===================================== */
+.portada {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.portada-contenido {
+  margin-left: auto;
+  margin-right: 500px;
+  text-align: right;
+  max-width: 500px;
+}
+
+.portada-contenido h1 {
+  font-size: 2.5rem;
+  color: #0e1a5b;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+/* =====================================
+   2. ¿QUÉ HACEMOS?
+   ===================================== */
+.que-hacemos {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.que-hacemos h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0e1a5b;
+}
+
+.que-hacemos p {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.imagen-que-hacemos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.imagen-que-hacemos img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* =====================================
+   3. ÉTICA ORGANIZACIONAL (ORIGINAL)
+   ===================================== */
+.etica-organizacional {
+  padding: 60px 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.etica-organizacional h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0e1a5b;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: #fafafa;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #0e1a5b;
+}
+
+.card-content p {
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.card-content button {
+  background-color: #0e1a5b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.card-content button:hover {
+  background-color: #0c1449;
+}
+
+/* =====================================
+   MODAL PARA TARJETAS (Ver más)
+   ===================================== */
+.th-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(14, 26, 91, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeInOverlay 0.3s ease-out forwards;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.th-modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleUpModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleUpModal {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.th-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: #f7f9fc;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.th-modal-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.th-modal-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: #0e1a5b;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.th-modal-header h3 {
+  margin: 0;
+  color: #0e1a5b;
+  font-size: 1.4rem;
+}
+
+.th-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.th-modal-close:hover {
+  color: #d32f2f;
+}
+
+.th-modal-body {
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.th-modal-desc {
+  margin: 0 0 20px 0;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e1e8ed;
+}
+
+.th-modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.th-modal-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #fdfdfd;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.th-modal-list li:hover {
+  transform: translateX(5px);
+  background: #fff;
+  border-color: #0e1a5b;
+  box-shadow: 0 4px 10px rgba(14, 26, 91, 0.08);
+}
+
+.th-modal-bullet {
+  color: #25d366;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* =====================================
+   4. PLANTEL DE EMPLEADOS
+   ===================================== */
+.plantel-empleados {
+  background-color: #9bbadd;
+  color: #fff;
+  padding: 60px 20px 80px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.plantel-empleados h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.empleados-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.empleados-container.fade {
+  opacity: 0.5;
+}
+
+.empleado {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.empleado:last-child {
+  border-bottom: none;
+}
+
+.empleado img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.empleado-info {
+  text-align: left;
+}
+
+.empleado-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.empleado-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.profesion {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.navigate-button {
+  margin-top: 20px;
+  background-color: #0e1a5b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navigate-button:hover {
+  background-color: #0c1449;
+}
+
+/* =====================================
+   Responsive (Mobile)
+   ===================================== */
+@media (max-width: 768px) {
+  .portada {
+    height: 250px;
+    padding: 0 15px;
+  }
+  .portada-contenido {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  .portada-contenido h1 {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+  }
+  .que-hacemos p {
+    max-width: 100%;
+    text-align: left; /* Better readability on small screens */
+  }
+  .imagen-que-hacemos img {
+    max-width: 100%;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+  .plantel-empleados {
+    padding: 40px 15px 60px;
+  }
+  .empleado {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .empleado img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  .empleado-info {
+    text-align: center;
+  }
+}

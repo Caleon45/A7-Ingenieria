@@ -1,0 +1,612 @@
+/* src/estilos/Servicios.css */
+/* -------------------------------------------------
+   BANDAS LATERALES FIJAS CON DEGRADADO AZUL MUY CLARO
+   ------------------------------------------------- */
+.servicios-contenedor::before,
+.servicios-contenedor::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 75px;
+  background: linear-gradient(to bottom, rgba(225,245,254,0.8), rgba(0, 141, 206, 0));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.servicios-contenedor::before {
+  left: 0;
+}
+
+.servicios-contenedor::after {
+  right: 0;
+}
+
+
+/* =====================================
+   1. PORTADA - Full width con texto alineado a la derecha
+   ===================================== */
+.portada-servicios {
+  width: 100vw;
+  height: 300px; /* Reducido de 400px */
+  margin-left: calc(-50vw + 50%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.portada-contenido {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  padding-right: 20px;
+}
+
+.portada-contenido h1 {
+  font-size: 2.8rem;
+  color: #0e1a5b;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 0;
+  box-shadow: 0 4px 15px rgba(14, 26, 91, 0.1);
+  position: relative;
+  right: -20px;
+}
+
+/* =====================================
+   2. CONTENIDO PRINCIPAL
+   ===================================== */
+.servicios-contenedor {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.servicio {
+  padding: 2.5rem;
+  margin: 4rem 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(14, 26, 91, 0.15);
+}
+
+.servicio h3 {
+  color: #0e1a5b;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.servicio h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #0e1a5b;
+}
+
+.servicio p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.servicio ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.servicio li {
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.servicio li:hover {
+  transform: translateX(10px);
+}
+
+/* Colores específicos por servicio */
+.obras-civiles {
+  background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #f8d7da;
+}
+
+.aguas-subterraneas {
+  background: linear-gradient(145deg, #f1f8ff 0%, #ffffff 100%);
+  border: 2px solid #d1ecf1;
+}
+
+.consultoria {
+  background: linear-gradient(145deg, #e8f5e9 0%, #ffffff 100%);
+  border: 2px solid #d4edda;
+}
+
+/* =====================================
+   3. GALERÍA DE OBRAS CIVILES
+   ===================================== */
+.galeria-container {
+  position: relative;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-wrapper {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.imagen-proyecto {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.gif-transicion {
+  position: absolute;
+  max-width: 200px;
+  animation: hammerAnimation 1s ease-in-out forwards;
+}
+
+@keyframes hammerAnimation {
+  0% { transform: scale(0.5); opacity: 0; }
+  30% { transform: scale(1.2); opacity: 1; }
+  60% { transform: scale(0.9); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* =============================
+   NUEVA CLASE PARA AGUAS SUBTERRÁNEAS
+   ============================= */
+.gif-transicion-agua {
+  position: absolute;
+  max-width: 200px;
+  animation: aguaAnimation 1.2s ease-in-out forwards;
+}
+
+@keyframes aguaAnimation {
+  0% { transform: translateY(-20px) scale(0.8); opacity: 0; }
+  50% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* NUEVA CLASE PARA CONSULTORÍA (gif consultoria) */
+.gif-transicion-consultoria {
+  position: absolute;
+  max-width: 200px;
+  animation: consultoriaAnimation 1s ease-in-out forwards;
+}
+
+@keyframes consultoriaAnimation {
+  0% { transform: scale(0.5); opacity: 0; }
+  30% { transform: scale(1.2); opacity: 1; }
+  60% { transform: scale(0.9); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.controles-galeria {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.boton-flecha {
+  background: #0e1a5b;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-flecha:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.boton-flecha:hover:not(:disabled) {
+  background: #1a2b7c;
+  transform: scale(1.1);
+}
+
+.flecha {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-30px); }
+}
+
+/* =====================================
+   4. RESPONSIVE DESIGN
+   ===================================== */
+@media (max-width: 1200px) {
+  .portada-contenido {
+    width: 85%;
+  }
+
+  .servicios-contenedor {
+    width: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .portada-servicios {
+    height: 350px;
+  }
+
+  .portada-contenido h1 {
+    font-size: 2.4rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portada-servicios {
+    width: 100%;
+    margin-left: 0;
+    height: 280px;
+    margin-bottom: 30px;
+  }
+
+  .portada-contenido {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .portada-contenido h1 {
+    font-size: 2rem;
+    padding: 10px 20px;
+    right: 0;
+  }
+
+  .servicios-contenedor {
+    width: 95%;
+    padding: 1rem 0;
+  }
+
+  .servicio {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .servicio h3 {
+    font-size: 1.8rem;
+  }
+
+  .servicio ul {
+    grid-template-columns: 1fr;
+  }
+
+  .imagen-wrapper {
+    min-height: 250px;
+  }
+
+  .boton-flecha {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portada-servicios {
+    height: 220px;
+  }
+
+  .portada-contenido h1 {
+    font-size: 1.8rem;
+  }
+
+  .servicio {
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .servicio h3 {
+    font-size: 1.6rem;
+  }
+
+  .servicio p {
+    font-size: 1rem;
+  }
+
+  .galeria-container {
+    padding: 1rem;
+  }
+
+  .imagen-proyecto {
+    max-height: 300px;
+  }
+}
+
+/* =====================================
+   5. ANIMACIONES DE ENTRADA
+   ===================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.servicio {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.servicio:nth-child(1) { animation-delay: 0.2s; }
+.servicio:nth-child(2) { animation-delay: 0.4s; }
+.servicio:nth-child(3) { animation-delay: 0.6s; }
+
+/* =====================================
+   7. SISTEMA DE PESTAÑAS (TABS) PARA PROYECTOS
+   ===================================== */
+.tabs-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(14, 26, 91, 0.1);
+  overflow-x: auto; /* Permite deslizar en celular */
+  white-space: nowrap; /* Evita que los botones se partan */
+  -webkit-overflow-scrolling: touch; /* Suavidad en iOS */
+  padding-top: 10px;
+}
+
+/* Ocultar barra de scroll en tabs para que se vea más limpio */
+.tabs-container::-webkit-scrollbar {
+  height: 6px;
+}
+.tabs-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tabs-container::-webkit-scrollbar-thumb {
+  background: rgba(14, 26, 91, 0.2);
+  border-radius: 10px;
+}
+
+.tab-button {
+  background: #f1f3f5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tab-button:hover {
+  background: #e2e6ea;
+  color: #0e1a5b;
+}
+
+.tab-button.active {
+  background: #0e1a5b;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(14, 26, 91, 0.3);
+}
+
+.tab-content {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* =====================================
+   Ajuste de tamaño para imágenes AS3 y AS4
+   ===================================== */
+/* Ahora apuntamos a la 3ª y 4ª subsección dentro de “aguas-subterraneas” */
+.aguas-subterraneas .proyectos-scroll .subseccion:nth-child(3) .imagen-proyecto,
+.aguas-subterraneas .proyectos-scroll .subseccion:nth-child(4) .imagen-proyecto {
+  max-height: 800px;
+}
+
+/* =====================================
+   NUEVO REDISEÑO: VISTA DE CATEGORÍAS (GRILLA)
+   ===================================== */
+.categorias-container {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.categorias-container h2 {
+  font-size: 2.5rem;
+  color: #0e1a5b;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.categorias-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #0e1a5b;
+  border-radius: 2px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.categoria-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-top: 5px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colores específicos de la marca en la grilla */
+.categoria-card.civil {
+  border-top-color: #0e1a5b;
+}
+
+.categoria-card.estructural {
+  border-top-color: #008dce;
+}
+
+.categoria-card.consultoria {
+  border-top-color: #4CAF50;
+}
+
+.categoria-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(14, 26, 91, 0.15);
+}
+
+.categoria-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  color: #0e1a5b;
+  transition: transform 0.3s ease;
+}
+
+.categoria-card:hover .categoria-icon {
+  transform: scale(1.1);
+}
+
+.categoria-card h3 {
+  font-size: 1.5rem;
+  color: #0e1a5b;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* =====================================
+   NUEVO REDISEÑO: VISTA DE DETALLE
+   ===================================== */
+.boton-volver-container {
+  text-align: left;
+  padding: 2rem 0 0 2rem;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0e1a5b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-volver:hover {
+  background-color: #1a2b7c;
+  transform: translateX(-5px);
+  color: white;
+}
+
+/* Ajustes para responsive de la grilla */
+@media (max-width: 768px) {
+  .categorias-container {
+    padding: 2rem 1rem;
+  }
+  
+  .categorias-container h2 {
+    font-size: 2rem;
+  }
+  
+  .boton-volver-container {
+    padding: 1rem 0 0 1rem;
+  }
+  
+  .btn-volver {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .categoria-card {
+    padding: 2rem 1rem;
+  }
+}

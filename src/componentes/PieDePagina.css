@@ -1,0 +1,179 @@
+/* =========================
+   COLORES PRINCIPALES
+   ========================= */
+   :root {
+    --color-azul: #0e1a5b;
+    --color-blanco: #ffffff;
+  }
+  
+  /* =========================
+     ESTILOS GENERALES DEL FOOTER
+     ========================= */
+  .pie-de-pagina {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(14, 26, 91, 0.9),
+        rgba(14, 26, 91, 0.9)
+      ),
+      url("https://www.transparenttextures.com/patterns/soft-circle-scales.png"); /* Textura suave */
+    background-size: cover;
+  }
+  
+  .contenido-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  /* =========================
+     SECCIONES DEL FOOTER
+     ========================= */
+  .seccion-contacto,
+  .seccion-enlaces,
+  .seccion-redes {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .seccion-contacto h3,
+  .seccion-enlaces h3,
+  .seccion-redes h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--color-blanco);
+  }
+  
+  .seccion-contacto p {
+    margin: 5px 0;
+    color: var(--color-blanco);
+  }
+  
+  .seccion-enlaces ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .seccion-enlaces ul li {
+    margin: 10px 0;
+  }
+  
+  .seccion-enlaces ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .seccion-enlaces ul li a:hover {
+    opacity: 0.8;
+  }
+  
+  /* =========================
+     ICONOS DE REDES SOCIALES
+     ========================= */
+  .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .icono-red {
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    object-fit: contain;
+  }
+  
+  .icono-red:hover {
+    transform: translateY(-5px) scale(1.15);
+    filter: drop-shadow(0 5px 15px rgba(255, 255, 255, 0.4));
+  }
+  
+  /* =========================
+     DERECHOS RESERVADOS
+     ========================= */
+  .derechos-reservados {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .credito-desarrollador-pill {
+    background-color: #1a1a2e; /* Color oscuro similar al de la imagen */
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
+  }
+
+  .credito-texto-base {
+    color: #9ba0b5;
+    font-weight: 500;
+  }
+
+  .credito-enlace {
+    color: #e57cd8; /* Rosa vibrante de Conechta */
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  .credito-enlace:hover {
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(229, 124, 216, 0.4));
+    transform: scale(1.05);
+  }
+
+  .credito-separador {
+    color: #5b4b8a;
+    font-weight: 900;
+    margin: 0 4px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .credito-texto-final {
+    color: #e2e4ef;
+    font-weight: 600;
+  }
+  
+  /* =========================
+     RESPONSIVE (Mobile-First)
+     ========================= */
+  @media (max-width: 768px) {
+    .pie-de-pagina {
+      padding: 30px 15px;
+    }
+    
+    .contenido-footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .seccion-contacto,
+    .seccion-enlaces,
+    .seccion-redes {
+      min-width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  

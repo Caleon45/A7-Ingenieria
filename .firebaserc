@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tarjeta-fidelidad-estrato"
+  },
+  "targets": {
+    "tarjeta-fidelidad-estrato": {
+      "hosting": {
+        "az-ingenieria-col": [
+          "az-ingenieria-col"
+        ]
+      }
+    }
+  }
+}

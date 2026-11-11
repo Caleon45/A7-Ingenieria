@@ -1,0 +1,26 @@
+/* src/estilos/estilos.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Fondo blanco */
+    color: #333;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #0e1a5b; /* Títulos en azul */
+  }
+  
+  .boton-primario {
+    background-color: #0e1a5b;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .boton-primario:hover {
+    background-color: #0c164d;
+  }
+  
